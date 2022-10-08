@@ -1,42 +1,25 @@
-package Classes;
-
 public class TeamMate {
+
     // Atributos
     private String Name;
     private String Userid;
-    private int Turma;
-    private Boolean Online = false;
+    private Boolean online;
 
-    // metodo construtor
-    public TeamMate() {
-        Name = "Julio cesar Alves";
-        Userid = "201520513";
+    // Construtor
 
+    public TeamMate(String Name, String Userid, boolean online) {
+        this.Name = Name;
+        this.Userid = Userid;
+        this.online = online;
     }
 
-    public TeamMate(String name, String userid) {
-        this.Name = name;
-        this.Userid = userid;
-        Turma = 10;
-
-    }
-
-    // Metodo Especificos
-    public void mostrarDados() {
-        System.out.format("Nome: %s\nUserid: %s\nTurma: %d",
-                Name,
-                Userid,
-                Turma);
-    }
-
-    // Parte onde está o Get e set.
-
+    // Aqui se encontra os Getters e Setters
     public String getName() {
         return Name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.Name = name;
     }
 
     public String getUserid() {
@@ -44,23 +27,15 @@ public class TeamMate {
     }
 
     public void setUserid(String userid) {
-        Userid = userid;
-    }
-
-    public int getTurma() {
-        return Turma;
-    }
-
-    public void setTurma(int turma) {
-        Turma = turma;
+        this.Userid = userid;
     }
 
     public Boolean getOnline() {
-        return Online;
+        return online;
     }
 
     public void setOnline(Boolean online) {
-        Online = online;
+        this.online = online;
     }
 
 }
